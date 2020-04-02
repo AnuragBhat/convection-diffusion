@@ -275,7 +275,7 @@ int main(){
 		output << endl;
 	}
 	output.close();
-	cout << "Result has been generated";
+	cout << "Results has been generated";
 
 	free(conn);
 	delete[] K_invf;
