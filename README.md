@@ -9,4 +9,4 @@ repository.
 
 I deliberately avoided the use of any external library as I am new to C++ programming and wanted to code something simple from scratch (as a learning exercise). However, if anyone is strong with MATLAB, consider using #Armadillo library which is very similar to MATLAB in functionality. Also, #Eigen is a good option and offers a wide range of matrix operations.
 
-![](https://latex.codecogs.com/png.latex?%5Cbegin%7Bequation%7D%20u%20%5Capprox%20%5C%7E%7Bu%7D%20%3D%20%5Csum_%7Bi%3D1%7D%5E%7Bn%7D%20N_%7Bi%7Du_i%20%5Cend%7Bequation%7D)
+![](https://latex.codecogs.com/svg.latex?%5Cbegin%7Bequation%7D%20u%20%5Capprox%20%5C%7E%7Bu%7D%20%3D%20%5Csum_%7Bi%3D1%7D%5E%7Bn%7D%20N_%7Bi%7Du_i%20%5Cend%7Bequation%7D)
