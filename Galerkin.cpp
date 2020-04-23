@@ -64,6 +64,13 @@ int main(){
 		conn[i] = (int *)malloc(2 * sizeof(int));
 	}
 
+	U_f = (double *)malloc((nodes-2) * sizeof(double));
+	
+	K_invf = (double **)malloc((nodes-2) * sizeof(double));
+	for (i=0;i<nodes-2;i++){
+		K_invf[i] = (double *)malloc((nodes-2) * sizeof(double));
+	}	
+	
 	//DEFINING MATRICES
 	matrixs X(nodes);	//DEFINING COORDINATE MATRIX
 	matrixd K(nodes, vector<double>(nodes)); //DEFINING STIFFNESS MATRIX
