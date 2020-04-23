@@ -4,6 +4,7 @@
 #include<iomanip>
 #include<vector>
 #include<fstream>
+#include<cstring>
 
 using namespace std;
 using std::setw;
