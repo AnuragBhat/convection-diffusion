@@ -51,8 +51,8 @@ int main(){
 	cout << "Select the method: \n[1] Galerkin Method\n[2] Petrov Galerkin Method" << endl;
 	cin >> choice; cout << endl;
 	
-	a = Pe*2*nu/h;		   //DEFINING 'a' IN TERMS OF Pe NUMBER	
-	alpha = (1/tanh(Pe)) - (1/Pe);		//DEFINING ALPHA (OPTIMUM VALUE)
+	a = Pe*2.0*nu/h;		   //DEFINING 'a' IN TERMS OF Pe NUMBER	
+	alpha = (1.0/tanh(Pe)) - (1.0/Pe);		//DEFINING ALPHA (OPTIMUM VALUE)
 	nodes = Nelem + 1;
 
 	//ALLOCATING DIRICHLET NODES
@@ -127,7 +127,7 @@ int main(){
 	}
 	//INITIALIZING THE U MATRIX
 	for (i=0;i<nodes;i++){
-		U[i] = 0;
+		U[i] = 0.0;
 	}
 
 	//ASSEMBLING THE GLOBAL STIFFNESS MATRIX MATRIX
