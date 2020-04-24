@@ -21,7 +21,7 @@ int main(){
 	double h,L,Pe,nu,a,alpha;
 	typedef vector<vector<double>> matrixd;	//DEFINING A DOUBLE ARRAY MATRIX TYPE
 	typedef vector<double> matrixs;   //DEFINING A SINGLE ARRAY MATRIX TYPE
-	int **conn;        //DEFINING CONNECTIVITY MATRIX
+	typedef vector<vector<int>> matrixint;   //DEFINING A DOUBLE ARRAY INT MATRIX TYPE
 	double **K_invf;
 	double *U_f;
 	double K_i[2][2], St[2][2];
@@ -59,13 +59,8 @@ int main(){
 	nodes_Dir[0] = 0;
 	nodes_Dir[1] = nodes-1;
 	
-	//ALLOCATING MEMORY TO CONNECTIVITY MATRIX
-	conn = (int **)malloc(nodes * sizeof(int));
-	for (i=0;i<nodes;i++){
-		conn[i] = (int *)malloc(2 * sizeof(int));
-	}	
-	
 	//DEFINING MATRICES
+	matrixint conn(Nelem, vector<int>(2)); //DEFINING CONNECTIVITY MATRIX
 	matrixs X(nodes);	//DEFINING COORDINATE MATRIX
 	matrixd K(nodes, vector<double>(nodes)); //DEFINING STIFFNESS MATRIX
 	matrixs F(nodes);	//DEFINING FORCE MATRIX
@@ -278,7 +273,6 @@ int main(){
 	output.close();
 	cout << "Results has been generated";
 
-	free(conn);
 	delete[] K_invf;
 	delete[] U_f;
 	return 0;
