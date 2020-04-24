@@ -13,3 +13,4 @@ I deliberately avoided the use of any external library as I am new to C++ progra
 
 The folder Gauss quadrature contains MATLAB code to solve the same problem using gaussian quadratures and isoparametric formulation. I have also included the Streamline-Upwind method. I have implemented the different methods as separate functions, this way it becomes easier to implement new methods.
 
+The C++ folder contains Galerkin.cpp that has gaussian quadratures implemented in it for Galerkin and Petrov-Galerkin formulations. The plot.m reads Result.dat that is the output of Galerkin.cpp. Plot.m generates the plots from Result.dat.
